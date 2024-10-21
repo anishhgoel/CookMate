@@ -5,7 +5,7 @@ const record = require('node-record-lpcm16'); // Ensure node-record-lpcm16 is in
 
 const speech = require('@google-cloud/speech');
 const client = new speech.SpeechClient({
-  keyFilename: './cookmate-439207-0fb5cacd1b33.json' // Replace with your key file path
+  keyFilename: './backend/config/cookmate-439207-0fb5cacd1b33.json' // Replace with your key file path
 });
 
 const recepieSteps = [
