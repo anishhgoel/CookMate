@@ -2,11 +2,13 @@ const express = require("express");
 const app = express();
 const port = 3000;
 const record = require('node-record-lpcm16'); // Ensure node-record-lpcm16 is installed
+require('dotenv').config();
 
 const speech = require('@google-cloud/speech');
 const client = new speech.SpeechClient({
-  keyFilename: './backend/config/cookmate-439207-0fb5cacd1b33.json' // Replace with your key file path
-});
+    keyFilename: process.env.GOOGLE_CLOUD_KEY  // Use the environment variable
+  });
+  
 
 const recepieSteps = [
     "Step 1 : Preheat oven to 350 degrees F (175 degrees C).",

@@ -1,2 +1,2 @@
 backend/config/*.json
-#
+.env
